@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: Random Quotes Generator
+
+  jpa:
+    hibernate:
+      ddl-auto=validate

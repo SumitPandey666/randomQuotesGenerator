@@ -1,0 +1,7 @@
+ORDER BY RAND() in repo --> It is incredibly easy to write and works perfectly for databases with < 100,000 rows.
+ As database grows to millions of quotes, ORDER BY RAND() becomes slow because MySQL has to assign a random number to every single row in the table and then sort them.
+The Future (DSA Approach): In future "Smart Generator" version, we will replace this with Reservoir Sampling or ID Offset Selection (picking a random ID between Min and Max) to make it instant at scale
+
+Create a separate QuoteResponseDTO class that only contains the fields we want to show (content, author name, tag names) and map the Entity to the DTO in the Service layer.
+To handler infinte recursive loop which is currently handled by @JsonIgnore
+
