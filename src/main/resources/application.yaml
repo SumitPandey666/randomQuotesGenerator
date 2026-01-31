@@ -2,6 +2,32 @@ spring:
   application:
     name: Random Quotes Generator
 
+  config:
+    import: vault://
+
+  cloud:
+    bootstrap:
+      enabled: false
+
+    vault:
+      uri: http://127.0.0.1:8200
+      scheme: http
+      token: ${VAULT_TOKEN}
+
+      kv:
+        enabled: true
+        backend: secret
+        #        application-name: db
+        default-context: db
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/quotes_db
+
+
+
   jpa:
     hibernate:
       ddl-auto=validate
+    show-sql: true
+
+debug: true
