@@ -20,10 +20,13 @@ spring:
         #        application-name: db
         default-context: db
 
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
+
+
   datasource:
     url: jdbc:mysql://localhost:3306/quotes_db
-
-
 
   jpa:
     hibernate:
