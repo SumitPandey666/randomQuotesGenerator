@@ -21,16 +21,15 @@ spring:
         default-context: db
 
   liquibase:
-    change-log: classpath:db/changelog/db.changelog-master.yaml
     enabled: true
-
+    change-log: classpath:db/changelog/db.changelog-master.yaml
 
   datasource:
-    url: jdbc:mysql://localhost:3306/quotes_db
+    url: jdbc:mysql://localhost:3306/quotes_db?allowMultiQueries=true
 
   jpa:
     hibernate:
-      ddl-auto=validate
+      ddl-auto: validate
     show-sql: true
 
 debug: true
