@@ -1,0 +1,49 @@
+databaseChangeLog:
+  # This includes every SQL file in the data folder, sorted alphabetically
+  - includeAll:
+      path: db/changelog/data/
+      relativeToChangelogFile: false
+#  - changeSet:
+#      id: load-bulk-data-final-v4 # Bump ID one last time
+#      author: etl-pipeline
+#      changes:
+#        # 1. Load Authors
+#        - loadData:
+#            tableName: authors
+#            file: data/authors.csv  # <--- CHANGED: Short relative path
+#            relativeToChangelogFile: true
+#            columns:
+#              - column: { index: 0, name: id, type: NUMERIC }
+#              - column: { index: 1, name: name, type: STRING }
+#              - column: { index: 2, name: slug, type: STRING }
+#              - column: { index: 3, name: bio, type: STRING }
+#
+#        # 2. Load Tags
+#        - loadData:
+#            tableName: tags
+#            file: data/tags.csv     # <--- CHANGED
+#            relativeToChangelogFile: true
+#            columns:
+#              - column: { index: 0, name: id, type: NUMERIC }
+#              - column: { index: 1, name: name, type: STRING }
+#
+#        # 3. Load Quotes
+#        - loadData:
+#            tableName: quotes
+#            file: data/quotes.csv   # <--- CHANGED
+#            relativeToChangelogFile: true
+#            columns:
+#              - column: { index: 0, name: id, type: NUMERIC }
+#              - column: { index: 1, name: content, type: STRING }
+#              - column: { index: 2, name: author_id, type: NUMERIC }
+#              - column: { index: 3, name: views, type: NUMERIC }
+#
+#        # 4. Load Quote_Tags
+#        - loadData:
+#            tableName: quote_tags
+#            file: data/quote_tags.csv # <--- CHANGED
+#            relativeToChangelogFile: true
+#            columns:
+#              - column: { index: 0, name: quote_id, type: NUMERIC }
+#              - column: { index: 1, name: tag_id, type: NUMERIC }
+
